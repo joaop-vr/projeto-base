@@ -1,10 +1,18 @@
 <template>
-  <div class="bg-blue-500 text-white p-4">
+  <div class="bg-blue-600 text-white p-4" role="banner">
     Hello, Tailwind CSS!
   </div>
-  <h1 class="text-xl font-bold underline">
+
+  <h1 class="text-xl font-bold underline" role="heading" aria-level="1">
     Hello world!!
   </h1>
+
+  <button
+    class="mt-4 bg-green-600 text-white px-4 py-2 rounded"
+    aria-label="Enviar formulário"
+  >
+    Enviar
+  </button>
 </template>
 
 <script lang="ts">
@@ -16,5 +24,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* Estilos específicos para o componente (opcional) */
 </style>
