@@ -6,7 +6,7 @@
 Após clonar o repositório, execute o seguinte comando para instalar as dependências do projeto:
 
 ```bash
-cd front-end && npm install
+cd projeto-base/front-end && npm install
 ```
 
 ## 🔧 Comandos úteis
