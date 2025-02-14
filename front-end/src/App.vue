@@ -1,36 +1,32 @@
-<template>
-  <div class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-6">
-    <h1 class="text-2xl font-bold mb-4" >
-      Bem-vindo ao Projeto Base
-    </h1>
-    <p class="text-lg text-gray-300 mb-6 text-center">
-      Esta é uma aplicação PWA desenvolvida com Vue 3, TypeScript e Tailwind CSS.
-    </p>
-    <button
-      class="bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-      
-      @click="showMessage"
-    >
-      Saiba mais
-    </button>
-    <p v-if="message" class="mt-4 text-green-400">:)</p>
-  </div>
-</template>
-
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
-
-export default defineComponent({
-  name: 'App',
-  setup() {
-    const message = ref(false);
-    const showMessage = () => {
-      message.value = !message.value;
-    };
-    return { message, showMessage };
-  },
-});
+<script setup lang="ts">
+import HelloWorld from './components/HelloWorld.vue'
+import PWABadge from './components/PWABadge.vue'
 </script>
 
+<template>
+  <div>
+    <a href="https://vite.dev" target="_blank">
+      <img src="/favicon.svg" class="logo" alt="my-vue-app logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
+  </div>
+  <HelloWorld msg="my-vue-app!" />
+  <PWABadge />
+</template>
+
 <style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
+}
 </style>
