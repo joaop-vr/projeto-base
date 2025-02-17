@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 import PWABadge from './components/PWABadge.vue'
 </script>
 
@@ -12,7 +11,11 @@ import PWABadge from './components/PWABadge.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="my-vue-app!" />
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
+  <router-view />
   <PWABadge />
 </template>
 
@@ -28,5 +31,13 @@ import PWABadge from './components/PWABadge.vue'
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+nav {
+  margin-top: 1em;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #646cff;
 }
 </style>
