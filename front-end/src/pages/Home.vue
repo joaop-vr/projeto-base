@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { useStore } from 'vuex'
 import { computed } from 'vue'
+import { useCounterStore } from '../stores/index'
 
-const store = useStore()
+const store = useCounterStore()
 
-const count = computed(() => store.state.count)
+const count = computed(() => store.count)
 
-const increment = () => store.commit('increment')
-const decrement = () => store.commit('decrement')
+const increment = () => store.increment()
+const decrement = () => store.decrement()
 </script>
 
 <template>
